@@ -48,6 +48,8 @@ class App extends Component {
           searchResults: tracks,
           isLoading: false
         });
+      } else {
+        console.log("Oops: " + err);
       }
     });
   }
@@ -96,7 +98,7 @@ class App extends Component {
     return (
       <ProgressSoundPlayer
         key={track.id}
-        client_id={client_id}
+        clientId={client_id}
         resolveUrl={track.permalink_url} />
     );
   }
